@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chibi Warrior Tap-to-Earn</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .tap-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .chibi-warrior {
+            width: 200px;
+            height: 200px;
+            background-image: url('chibi_warrior.png');
+            background-size: cover;
+            cursor: pointer;
+        }
+        .points {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tap-area">
+        <div class="chibi-warrior" onclick="tapWarrior()"></div>
+        <div class="points">Points: <span id="points">0</span></div>
+    </div>
+    <script>
+        let points = 0;
+        function tapWarrior() {
+            points += 1;
+            document.getElementById('points').innerText = points;
+            // Here you can add the code to send the points to the server
+        }
+    </script>
+</body>
+</html>
